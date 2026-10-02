@@ -1,40 +1,40 @@
-# 🧾 Mini ERP — Customer Management
+# 🧾 Mini ERP — Gestão de Clientes
 
-> **A portfolio project focused on building a real-world CRUD application with a polished business interface.**
+> **Projeto de portfólio focado na construção de uma aplicação web de gestão de clientes com interface profissional.**
 
 ![PHP](https://img.shields.io/badge/PHP-8%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8%2B-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![PDO](https://img.shields.io/badge/PDO-Prepared%20Statements-00F58A?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-111111?style=for-the-badge)
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-111111?style=for-the-badge)
 
-## 👾 About the project
+## 👾 Sobre o projeto
 
-Mini ERP is a customer management application created to demonstrate an end-to-end web development flow using **PHP 8+, MySQL and PDO**.
+O **Mini ERP** é uma aplicação de gestão de clientes criada para demonstrar um fluxo completo de desenvolvimento web utilizando **PHP 8+, MySQL e PDO**.
 
-The project goes beyond a basic CRUD: it includes authentication, CSRF protection, server-side search and filtering, pagination, dashboard indicators, responsive UI and prepared statements.
+O projeto vai além de um CRUD básico e inclui autenticação, proteção contra CSRF, busca e filtros no servidor, paginação, indicadores no painel, interface responsiva e consultas com prepared statements.
 
-### ✨ What you can do
+### ✨ O que é possível fazer
 
-- 🔐 Authenticate with session-based login
-- 👥 Create, edit and delete customers
-- 🔎 Search customers by name, e-mail or company
-- 🟢 Filter by active/inactive status
-- 📄 Navigate through paginated results
-- 📊 Track customer metrics from the dashboard
-- 📱 Use the interface on desktop or mobile
+- 🔐 Entrar no sistema com autenticação baseada em sessão
+- 👥 Cadastrar, editar e excluir clientes
+- 🔎 Pesquisar clientes por nome, e-mail ou empresa
+- 🟢 Filtrar por status ativo/inativo
+- 📄 Navegar pelos resultados com paginação
+- 📊 Acompanhar métricas da base no painel
+- 📱 Utilizar a interface no computador ou celular
 
-## 🧠 What this project demonstrates
+## 🧠 O que este projeto demonstra
 
-| Area | Demonstrated skills |
+| Área | Competências demonstradas |
 |---|---|
-| Backend | PHP 8+, sessions, validation, prepared statements |
-| Database | MySQL, indexes, CRUD queries, PDO |
-| Security | `password_hash/password_verify`, CSRF token, output escaping |
-| Frontend | HTML5, responsive CSS, accessible forms |
-| Architecture | Separation between `public/`, `src/` and `database/` |
-| Dev workflow | Git/GitHub-ready structure and environment configuration |
+| Backend | PHP 8+, sessões, validação, prepared statements |
+| Banco de dados | MySQL, índices, consultas CRUD, PDO |
+| Segurança | `password_hash/password_verify`, token CSRF, escape de saída |
+| Frontend | HTML5, CSS responsivo, formulários acessíveis |
+| Arquitetura | Separação entre `public/`, `src/` e `database/` |
+| Fluxo de desenvolvimento | Estrutura pronta para Git/GitHub e configuração por ambiente |
 
-## 🗂️ Project structure
+## 🗂️ Estrutura do projeto
 
 ```text
 mini-erp-php/
@@ -55,24 +55,24 @@ mini-erp-php/
 └── README.md
 ```
 
-## ▶️ Running locally
+## ▶️ Como executar localmente
 
-### Requirements
+### Requisitos
 
 - PHP 8.0+
 - MySQL 8.0+
-- PDO MySQL extension
+- Extensão PDO MySQL habilitada
 
-### 1. Clone
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/bibicamatta/mini-erp-php.git
 cd mini-erp-php
 ```
 
-### 2. Configure the database
+### 2. Configure o banco de dados
 
-Copy `.env.example` to `.env` and adjust the credentials if necessary:
+Copie `.env.example` para `.env` e ajuste as credenciais, se necessário:
 
 ```env
 DB_HOST=127.0.0.1
@@ -82,61 +82,61 @@ DB_USER=root
 DB_PASS=
 ```
 
-### 3. Create the database
+### 3. Crie o banco
 
-Import `database/schema.sql` into MySQL. The script creates the database, tables and demo records automatically.
+Importe `database/schema.sql` no MySQL. O script cria o banco, as tabelas e registros de demonstração automaticamente.
 
-### 4. Start PHP
+### 4. Inicie o servidor PHP
 
 ```bash
 php -S localhost:8000 -t public
 ```
 
-Open:
+Abra no navegador:
 
 `http://localhost:8000/login.php`
 
-### 🔑 Demo account
+### 🔑 Acesso de demonstração
 
 ```text
 E-mail: demo@mini-erp.local
 Senha: password
 ```
 
-> This credential exists only for local demonstration.
+> Essas credenciais existem apenas para demonstração local.
 
-## 🔒 Security notes
+## 🔒 Boas práticas de segurança
 
-This project intentionally demonstrates a few defensive practices commonly used in PHP applications:
+Este projeto demonstra algumas práticas defensivas comuns em aplicações PHP:
 
-- Password verification with `password_verify`
-- Session ID regeneration after login
-- CSRF tokens on state-changing requests
-- PDO prepared statements
-- HTML escaping with `htmlspecialchars`
-- Credentials stored through environment variables
+- Verificação de senha com `password_verify`
+- Regeneração do ID da sessão após o login
+- Tokens CSRF em requisições que alteram dados
+- Prepared statements com PDO
+- Escape de HTML com `htmlspecialchars`
+- Credenciais configuradas por variáveis de ambiente
 
-For a production system, the application would require additional hardening such as stronger session cookie configuration, authorization policies, rate limiting, audit logs and centralized environment/secret management.
+Para um sistema em produção, seriam necessárias medidas adicionais, como configuração mais rigorosa de cookies de sessão, controle de permissões, rate limiting, logs de auditoria e gerenciamento centralizado de segredos.
 
-## 🚧 Roadmap
+## 🚧 Próximos passos
 
-- [ ] Unit and integration tests
-- [ ] Role-based permissions
-- [ ] Docker environment
-- [ ] REST API for customers
-- [ ] Export to CSV
-- [ ] Audit history
+- [ ] Testes unitários e de integração
+- [ ] Controle de permissões por perfil
+- [ ] Ambiente com Docker
+- [ ] API REST para clientes
+- [ ] Exportação para CSV
+- [ ] Histórico de alterações
 
-## 💡 Why I built it
+## 💡 Por que criei este projeto
 
-This project is part of my developer portfolio and was created to practice the complete path from **database design → backend logic → validation → UI → security → deployment-ready structure**.
+Este projeto faz parte do meu portfólio de desenvolvimento e foi criado para praticar o fluxo completo de uma aplicação: **modelagem do banco de dados → lógica de backend → validação → interface → segurança → estrutura preparada para publicação**.
 
 ---
 
 <div align="center">
 
-**Built with PHP, curiosity and a lot of debugging.** 💚
+**Feito com PHP, curiosidade e muitos testes.** 💚
 
-`while (learning) { build(); improve(); repeat(); }`
+`while (aprendendo) { construir(); melhorar(); repetir(); }`
 
 </div>

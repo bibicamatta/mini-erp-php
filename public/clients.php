@@ -89,7 +89,7 @@ $flash = flash();
 <div class="app-shell">
     <aside class="sidebar">
         <div>
-            <a class="brand" href="/index.php"><span class="brand-mark">⌘</span><span><strong>mini<span>erp</span></strong><small>portfolio build</small></span></a>
+            <a class="brand" href="/index.php"><span class="brand-mark">⌘</span><span><strong>mini<span>erp</span></strong><small>projeto de portfólio</small></span></a>
             <nav class="side-nav" aria-label="Navegação principal"><a href="/index.php"><span>⌂</span> Dashboard</a><a class="active" href="/clients.php"><span>◈</span> Clientes</a></nav>
         </div>
         <div class="sidebar-footer"><div class="profile-mini"><div class="avatar"><?= e(strtoupper(substr($_SESSION['user']['name'] ?? 'B', 0, 1))) ?></div><div><strong><?= e($_SESSION['user']['name'] ?? 'Usuário') ?></strong><small>Administrador</small></div></div><a class="logout-link" href="/logout.php">↪ Sair</a></div>
@@ -104,7 +104,7 @@ $flash = flash();
         <?php if ($flash): ?><div class="flash"><span>✓</span><?= e($flash) ?><button type="button" onclick="this.parentElement.remove()" aria-label="Fechar">×</button></div><?php endif; ?>
 
         <section id="novo-cliente" class="panel form-panel">
-            <div class="panel-head"><div><span class="eyebrow"><?= $edit ? 'EDIT MODE' : 'QUICK CREATE' ?></span><h2><?= $edit ? 'Editar cliente' : 'Novo cliente' ?></h2></div><?php if ($edit): ?><a class="text-link" href="/clients.php">Cancelar edição</a><?php endif; ?></div>
+            <div class="panel-head"><div><span class="eyebrow"><?= $edit ? 'MODO DE EDIÇÃO' : 'CADASTRO RÁPIDO' ?></span><h2><?= $edit ? 'Editar cliente' : 'Novo cliente' ?></h2></div><?php if ($edit): ?><a class="text-link" href="/clients.php">Cancelar edição</a><?php endif; ?></div>
             <form class="grid-form" method="post">
                 <input type="hidden" name="csrf" value="<?= e(csrfToken()) ?>"><input type="hidden" name="action" value="save"><input type="hidden" name="id" value="<?= (int) ($edit['id'] ?? 0) ?>">
                 <label>Nome<input name="name" required placeholder="Ex.: Marina Oliveira" value="<?= e($edit['name'] ?? '') ?>"></label>
@@ -117,7 +117,7 @@ $flash = flash();
         </section>
 
         <section class="panel">
-            <div class="panel-head table-title"><div><span class="eyebrow">DATABASE</span><h2>Base de clientes</h2></div><span class="muted"><?= $totalFiltered ?> registro<?= $totalFiltered === 1 ? '' : 's' ?></span></div>
+            <div class="panel-head table-title"><div><span class="eyebrow">BANCO DE DADOS</span><h2>Base de clientes</h2></div><span class="muted"><?= $totalFiltered ?> registro<?= $totalFiltered === 1 ? '' : 's' ?></span></div>
             <form class="filters" method="get">
                 <div class="search-box"><span>⌕</span><input name="q" value="<?= e($search) ?>" placeholder="Buscar por nome, e-mail ou empresa..."></div>
                 <select name="status"><option value="">Todos os status</option><option value="active" <?= $statusFilter === 'active' ? 'selected' : '' ?>>Ativos</option><option value="inactive" <?= $statusFilter === 'inactive' ? 'selected' : '' ?>>Inativos</option></select>

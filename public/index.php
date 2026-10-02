@@ -17,7 +17,7 @@ $activationRate = $total > 0 ? round(($active / $total) * 100) : 0;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Mini ERP para gestão de clientes desenvolvido em PHP e MySQL.">
-    <title>Mini ERP • Dashboard</title>
+    <title>Mini ERP • Painel</title>
     <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
@@ -26,10 +26,10 @@ $activationRate = $total > 0 ? round(($active / $total) * 100) : 0;
         <div>
             <a class="brand" href="/index.php">
                 <span class="brand-mark">⌘</span>
-                <span><strong>mini<span>erp</span></strong><small>portfolio build</small></span>
+                <span><strong>mini<span>erp</span></strong><small>projeto de portfólio</small></span>
             </a>
             <nav class="side-nav" aria-label="Navegação principal">
-                <a class="active" href="/index.php"><span>⌂</span> Dashboard</a>
+                <a class="active" href="/index.php"><span>⌂</span> Painel</a>
                 <a href="/clients.php"><span>◈</span> Clientes</a>
             </nav>
         </div>
@@ -45,9 +45,9 @@ $activationRate = $total > 0 ? round(($active / $total) * 100) : 0;
     <main class="main-content">
         <header class="topbar">
             <div>
-                <span class="eyebrow">OVERVIEW / <?= strtoupper(date('M Y')) ?></span>
+                <span class="eyebrow">VISÃO GERAL / <?= strtoupper(date('M Y')) ?></span>
                 <h1>Olá, <?= e($_SESSION['user']['name'] ?? 'Beatriz') ?> <span class="wave">👋</span></h1>
-                <p>Acompanhe os principais dados do seu relacionamento com clientes.</p>
+                <p>Acompanhe os principais dados da sua base de clientes.</p>
             </div>
             <a class="button" href="/clients.php#novo-cliente">+ Novo cliente</a>
         </header>
@@ -57,7 +57,7 @@ $activationRate = $total > 0 ? round(($active / $total) * 100) : 0;
         <section class="metrics">
             <article class="metric-card">
                 <div class="metric-icon">◫</div>
-                <div><span>Total de clientes</span><strong><?= $total ?></strong><small>base cadastrada</small></div>
+                <div><span>Total de clientes</span><strong><?= $total ?></strong><small>clientes cadastrados</small></div>
             </article>
             <article class="metric-card accent">
                 <div class="metric-icon">✓</div>
@@ -69,14 +69,14 @@ $activationRate = $total > 0 ? round(($active / $total) * 100) : 0;
             </article>
             <article class="metric-card">
                 <div class="metric-icon">⌂</div>
-                <div><span>Empresas</span><strong><?= $companies ?></strong><small>vínculos cadastrados</small></div>
+                <div><span>Empresas</span><strong><?= $companies ?></strong><small>empresas cadastradas</small></div>
             </article>
         </section>
 
         <section class="dashboard-grid">
             <article class="panel chart-card">
                 <div class="panel-head">
-                    <div><span class="eyebrow">HEALTH CHECK</span><h2>Base de clientes</h2></div>
+                    <div><span class="eyebrow">VERIFICAÇÃO DA BASE</span><h2>Base de clientes</h2></div>
                     <span class="live-badge"><i></i> Atualizado agora</span>
                 </div>
                 <div class="donut-wrap">
@@ -89,9 +89,9 @@ $activationRate = $total > 0 ? round(($active / $total) * 100) : 0;
             </article>
 
             <article class="panel insight-card">
-                <span class="eyebrow">PORTFOLIO NOTE</span>
+                <span class="eyebrow">NOTA DO PROJETO</span>
                 <h2>Construído para demonstrar prática.</h2>
-                <p>Autenticação, CRUD, prepared statements, filtros, validação e uma interface responsiva em PHP + MySQL.</p>
+                <p>Autenticação, CRUD, prepared statements, filtros, validação e uma interface responsiva com PHP + MySQL.</p>
                 <div class="tech-row"><span>PHP 8+</span><span>PDO</span><span>MySQL</span><span>CSS</span></div>
                 <a class="text-link" href="/clients.php">Explorar clientes →</a>
             </article>
@@ -99,7 +99,7 @@ $activationRate = $total > 0 ? round(($active / $total) * 100) : 0;
 
         <section class="panel">
             <div class="panel-head">
-                <div><span class="eyebrow">RECENT</span><h2>Clientes recentes</h2></div>
+                <div><span class="eyebrow">RECENTES</span><h2>Clientes recentes</h2></div>
                 <a class="text-link" href="/clients.php">Ver todos →</a>
             </div>
             <div class="table-wrap">
